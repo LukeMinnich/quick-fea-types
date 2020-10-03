@@ -1,0 +1,42 @@
+syntax = "proto3";
+package types;
+
+import "material.proto";
+
+message FrameElement {
+  string id = 1;
+  string name = 2;
+  string start_node_id = 3;
+  string end_node_id = 4;
+  FrameElementGeometry geometry = 5;
+  IsotropicMaterial material = 6;
+  FrameElementEndRelease start_releases = 7;
+  FrameElementEndRelease end_releases = 8;
+}
+
+message FrameElementGeometry {
+  FrameElementCrossSectionProperties cross_section = 1;
+  double rotation = 2;
+}
+
+message FrameElementCrossSectionProperties {
+  double A = 1;
+  double Avy = 2;
+  double Avz = 3;
+  double J = 4;
+  double Iy = 5;
+  double Iz = 6;
+}
+
+message FrameElementEndRelease {
+  enum Category {
+    FIXED = 0;
+    FREE = 1;
+  }
+  Category A = 1;
+  Category Vy = 2;
+  Category Vz = 3;
+  Category T = 4;
+  Category My = 5;
+  Category Mz = 6;
+}

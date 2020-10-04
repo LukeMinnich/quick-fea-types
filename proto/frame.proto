@@ -1,5 +1,5 @@
 syntax = "proto3";
-package types;
+package quick_fea_types;
 
 import "material.proto";
 

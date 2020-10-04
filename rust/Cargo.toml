@@ -1,0 +1,17 @@
+[package]
+authors = ["Luke Minnich <squareman2357@gmail.com>"]
+edition = "2018"
+name = "quick-fea-types"
+version = "0.1.0"
+
+[lib]
+name = "quick_fea_types"
+path = "src/quick_fea_types.rs" # Note: this file has to exist, even if blank, otherwise build fails
+crate-type=["lib"]
+
+
+[dependencies]
+prost = {version = "0.6"}
+
+[build-dependencies]
+prost-build = {version = "0.6"}

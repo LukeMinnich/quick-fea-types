@@ -1,0 +1,21 @@
+syntax = "proto3";
+package quick_fea_types;
+
+enum SectionCategory {
+  HOMOGENOUS = 0;
+}
+
+message HomogenousSection {
+  string id = 1;
+  string name = 2;
+  HomogenousSectionProperties properties = 3;
+}
+
+message HomogenousSectionProperties {
+  double A = 1;
+  double Avy = 2;
+  double Avz = 3;
+  double J = 4;
+  double Iy = 5;
+  double Iz = 6;
+}

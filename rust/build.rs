@@ -15,7 +15,7 @@ fn main() {
         .compile_protos(
             &[
                 "../proto/utility.proto",
-                "../proto/material.proto",
+                "../proto/node.proto",
                 "../proto/frame.proto",
             ],
             &["../proto/"],

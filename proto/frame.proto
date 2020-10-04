@@ -2,24 +2,24 @@ syntax = "proto3";
 package quick_fea_types;
 
 import "material.proto";
+import "section.proto";
 
-message FrameElement {
+message Frame {
   string id = 1;
   string name = 2;
   string start_node_id = 3;
   string end_node_id = 4;
-  FrameElementGeometry geometry = 5;
-  IsotropicMaterial material = 6;
-  FrameElementEndRelease start_releases = 7;
-  FrameElementEndRelease end_releases = 8;
+  string material_id = 5;
+  string section_id = 6;
+  double rotation = 7;
+  MaterialCategory material_category = 8;
+  SectionCategory section_category = 9;
+  FrameStiffnessModifiers stiffness_modifiers = 10;
+  FrameEndReleases start_releases = 11;
+  FrameEndReleases end_releases = 12;
 }
 
-message FrameElementGeometry {
-  FrameElementCrossSectionProperties cross_section = 1;
-  double rotation = 2;
-}
-
-message FrameElementCrossSectionProperties {
+message FrameStiffnessModifiers {
   double A = 1;
   double Avy = 2;
   double Avz = 3;
@@ -28,7 +28,7 @@ message FrameElementCrossSectionProperties {
   double Iz = 6;
 }
 
-message FrameElementEndRelease {
+message FrameEndReleases {
   enum Category {
     FIXED = 0;
     FREE = 1;

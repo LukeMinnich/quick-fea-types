@@ -1,6 +1,13 @@
 syntax = "proto3";
 package quick_fea_types;
 
-message IsotropicMaterial {
+enum MaterialCategory {
+  ISOTROPIC = 0;
+}
 
+message IsotropicMaterial {
+  string id = 1;
+  string name = 2;
+  double E = 3;
+  double nu = 4;
 }

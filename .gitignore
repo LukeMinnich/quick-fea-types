@@ -1,2 +1,4 @@
 rust/Cargo.lock
 rust/target/
+js/node_modules/
+js/package-lock.json

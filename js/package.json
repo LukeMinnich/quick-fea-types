@@ -8,6 +8,10 @@
   },
   "author": "Luke Minnich <squareman2357@gmail.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LukeMinnich/quick-fea-types.git"
+  },
   "devDependencies": {
     "protobufjs": "^6.10.1"
   }
